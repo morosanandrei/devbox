@@ -1,0 +1,24 @@
+# Secrets - NEVER commit these
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local overrides (for personal changes not to be committed)
+*.local
+.bashrc.local
+.exports.local
+.aliases.local

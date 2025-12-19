@@ -1,0 +1,48 @@
+# ~/.exports - Environment variables
+# Source this from .bashrc: [ -f ~/.exports ] && source ~/.exports
+
+# ----- Default programs -----
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+
+# ----- History -----
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoreboth:erasedups  # Ignore duplicates and commands starting with space
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# ----- Less -----
+export LESS='-R'  # Allow colors in less
+
+# ----- Locale -----
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
+
+# ----- Volta -----
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# ----- Local bin -----
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+# ----- Docker -----
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
+
+# ----- Development -----
+export NODE_ENV='development'
+
+# ----- Colors for ls -----
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# ----- GPG -----
+export GPG_TTY=$(tty)
+
+# ----- Project-specific (uncomment/modify as needed) -----
+# export DATABASE_URL='postgresql://postgres:postgres@localhost:5432/devdb'
+# export REDIS_URL='redis://localhost:6379'
+# export AWS_PROFILE='default'
+# export AWS_REGION='eu-central-1'

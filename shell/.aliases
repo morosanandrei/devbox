@@ -1,0 +1,108 @@
+# ~/.aliases - Command shortcuts
+# Source this from .bashrc: [ -f ~/.aliases ] && source ~/.aliases
+
+# ----- Navigation -----
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ~='cd ~'
+alias proj='cd ~/projects'
+
+# ----- List files -----
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lt='ls -alFt'  # Sort by time
+
+# ----- Safety -----
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# ----- Docker -----
+alias d='docker'
+alias dc='docker compose'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dimg='docker images'
+alias dex='docker exec -it'
+alias dlogs='docker logs -f'
+alias dprune='docker system prune -af'
+alias dstop='docker stop $(docker ps -q)'
+
+# ----- Docker Compose shortcuts -----
+alias dcup='docker compose up -d'
+alias dcdown='docker compose down'
+alias dclogs='docker compose logs -f'
+alias dcps='docker compose ps'
+alias dcrestart='docker compose restart'
+alias dcbuild='docker compose build'
+
+# ----- Git -----
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gl='git log --oneline -20'
+alias glog='git log --oneline --graph --decorate'
+alias gst='git stash'
+alias gstp='git stash pop'
+alias grh='git reset --hard'
+alias grhh='git reset --hard HEAD'
+
+# ----- Node/NPM -----
+alias ni='npm install'
+alias nid='npm install --save-dev'
+alias nig='npm install -g'
+alias nr='npm run'
+alias nrs='npm run start'
+alias nrd='npm run dev'
+alias nrb='npm run build'
+alias nrt='npm run test'
+
+# ----- pnpm -----
+alias pn='pnpm'
+alias pni='pnpm install'
+alias pna='pnpm add'
+alias pnad='pnpm add -D'
+alias pnr='pnpm run'
+alias pnrd='pnpm run dev'
+alias pnrb='pnpm run build'
+
+# ----- System -----
+alias ports='netstat -tulanp'
+alias meminfo='free -h'
+alias cpuinfo='lscpu'
+alias diskinfo='df -h'
+alias myip='curl -s ifconfig.me'
+alias weather='curl wttr.in'
+
+# ----- Misc -----
+alias c='clear'
+alias h='history'
+alias reload='source ~/.bashrc'
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%Y-%m-%d %H:%M:%S"'
+alias week='date +%V'
+
+# ----- Grep with color -----
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# ----- Tailscale -----
+alias ts='tailscale'
+alias tsup='sudo tailscale up'
+alias tsdown='sudo tailscale down'
+alias tsstatus='tailscale status'
