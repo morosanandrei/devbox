@@ -8,7 +8,7 @@ set -e
 # ===========================================
 
 USERNAME="morosanandrei"
-NODE_VERSION="22"  # LTS version, change if needed
+NODE_VERSION="24"  # LTS version, change if needed
 
 echo "=========================================="
 echo "🚀 Setting up your dev box..."
