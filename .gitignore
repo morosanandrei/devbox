@@ -22,3 +22,6 @@ Thumbs.db
 .bashrc.local
 .exports.local
 .aliases.local
+
+# Vagrant
+.vagrant
