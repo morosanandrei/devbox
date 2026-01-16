@@ -29,6 +29,7 @@ apt-get install -y \
     build-essential \
     gnupg \
     lsb-release \
+    vim \
 
 # ----- 3. Create User -----
 echo "👤 Creating user: $USERNAME..."
